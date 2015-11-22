@@ -1,0 +1,50 @@
+<html>
+<ion-modal-view>
+<ion-header-bar>
+  
+    <h1 class="title">Offer Details</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin1()">Close</button>
+    </div>
+  </ion-header-bar>
+<ion-content >
+
+ <div  class="item item-avatar divouter" >
+    <img ng-src="data:image/jpeg;base64,{{addoffers1.offerlogo}}">
+	
+    <h2 class="animated tada" align="center">{{addoffers1.loginid}}</h2>
+	 <p>{{addoffers1.offershopname}}</p>
+	 <h3 class="animated tada" align="right"></h3>
+	 <h3 class="animated tada" align="right"></h3>
+	<a href="tel:+919618188535"  >Call me</a>
+  </div>
+ <div class="item item-body divouter" >
+	<img  alt='' ng-src="data:image/jpeg;base64,{{addoffers1.offerimage}}" >
+    <p>
+     {{addoffers1.offerdetails}}
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a><br>
+	  <a href="tel:{{addoffers1.offercontact1}}" class="subdued icon ion-ios-telephone">{{addoffers1.offercontact1}}</a><br>
+	  <a href="tel:{{addoffers1.offercontact2}}" class="subdued icon ion-ios-telephone">{{addoffers1.offercontact2}}</a><br>
+	  <a href="mailto:{{addoffers1.offeremail}}" class="subdued icon ion-ios-email"> {{addoffers1.offeremail}}</a>
+    </p>
+  </div>
+ <div class=" item  tabs tabs-secondary tabs-icon-left  " style="background-color: #01D2FF;">
+    <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item"  >
+    <i class="icon ion-chatbox" value="Sms" ng-click="sendsms()"></i>Sms </a>
+     <a class="tab-item"  >
+    <i class="icon ion-share" value="Share" ng-click="shareAnywhere()"></i>Share Ad  </a>
+  </div>
+<a class="item item-icon-left assertive" href="#" style="background-color: #01D2FF;">
+    <i class="icon ion-music-note"></i>
+   Listen to The Ad Audio
+  </a>
+</ion-content >
+</ion-modal-view>
+<html>

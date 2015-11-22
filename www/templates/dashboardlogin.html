@@ -1,0 +1,42 @@
+<html>
+ <body>
+
+ <ion-view title="LoKal Offers"  align="center">
+    <ion-content style="background: url(img/pic4.png) center; background-size: cover;" padding="true" class="has-header has-footer">
+	 
+        <form name="loginForm" ng-submit="login_verify($event,loginData);" novalidate>
+            <div class="padding" align="center">
+                <ion-md-input placeholder="Username" highlight-color="hightlight-positive" type="text" ng-model="loginData.username" ng-class="{ 'has-errors' : loginForm.username.$invalid && !loginForm.username.$pristine, 'no-errors' : loginForm.username.$valid}" required></ion-md-input> 
+           
+           
+                   <ion-md-input placeholder="Password" highlight-color="energized" type="password" ng-model="loginData.password" ng-minlength='1' ng-class="{ 'has-errors' : loginForm.password.$invalid && !loginForm.password.$pristine, 'no-errors' : loginForm.password.$valid}" required></ion-md-input>
+			</div>
+        </form>
+        <button class="button button-positive button-positive" ng-disabled="loginForm.$invalid" ng-click="login_verify($event,loginData)">Login</button>
+		<button class="button button-assertive button-positive"   ng-click="closeLogin()" >Cancel</button>
+	    <!--<button class="button button-positive button-block"   ng-click="register($event)">Register</button>
+	    <button class="button button-positive button-block"   >Forgot Password</button>-->
+	
+		
+		
+    </ion-content>
+
+
+
+</ion-view>
+
+<div class="bar bar-footer bar-positive" style="height:3%;">
+  <button class="button button-clear"></button>
+  <a style="font-size:50%">(c)Copy Rights Reserved @2015</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+  <a style="font-size:50%" >Developed by Devi Android Apps</a>
+</div> 
+</body>
+</html>
+
+
+
+
+
+
+
+

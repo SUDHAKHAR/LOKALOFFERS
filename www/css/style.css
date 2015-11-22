@@ -1,0 +1,172 @@
+/* Empty. Add your own CSS if you like */
+.my-menu {
+  background-color: #520000;
+}
+.error-container {
+  margin: 5px 0;
+}
+.error-container:last-child {
+    margin: 5px 0 0;
+}
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #555;
+  vertical-align: middle;
+}
+.error i {
+  font-size: 24px;
+  color: #B83E2C;  
+  vertical-align: middle;
+}
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+.has-errors {
+  border-bottom: 3px solid #B83E2C;
+}
+.no-errors {
+  border-bottom: 3px solid green;
+}
+.app-icon {
+    background-color: #fff;
+    background: url('../img/logo.png') center;
+    background-size: cover;
+    border-radius: 75%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+.social-login {
+    position: fixed;
+    bottom: 3%;
+}
+#button1 {
+    float: right;
+    margin-right:10px;
+
+}
+
+
+map-canvas {
+display: block;
+  width: 80%;
+  height: 80%; 
+		#map-canvas {
+        height: 50%;
+        margin: 10px;
+        padding: 1px
+      }
+  }
+      .controls {
+        background-color: transparent;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        height: 32px;
+        margin-left: 17px;
+        margin-top: 16px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak,
+.x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+body.platform-windowsphone .scroll-content,
+body.platform-windowsphone8 .scroll-content {
+    overflow: auto;
+}
+	  #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        width: 350px;
+        z-index: 5;
+        background-color:#520000;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+      #latlng {
+        width: 225px;
+      }
+.my-menu .list {
+  background-color: transparent;
+} 
+#map { display: block;height: 40%;  margin-left: 50px; width: 75%;}
+map {
+  display: block;
+  width: 75%;
+    margin-left: 50px;
+   
+  height: 40%;
+   border: 1px solid #999;
+}
+map1 {
+  display: block;
+  width: 70%;
+  height: 25%;
+}
+.scroll {
+  height: 100%;
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 3px 2px #107FC9;
+  -webkit-box-shadow: 3px 3px 3px 2px #107FC9;
+  box-shadow:         3px 3px 3px 2px #107FC9;
+}
+.one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+.my-menu .item, .my-menu .item-content, .my-menu .item-complex{
+  background-color: transparent;
+  color:transparent;
+  border-color: rgba(0,0,0,0);
+}
+
+/* Your app's CSS, go crazy, make it your own */
+
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+.divouter{
+color: #FCF7FA;
+    background-color: #FCFEF5;
+    border: 1px FCF7FA;
+    padding: 2px;
+}	
+.pane {
+  background-color:white  ;
+}
+
+.bar.bar-transparent {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+}
+
+.bar .title {
+  color: #eee;
+}
+

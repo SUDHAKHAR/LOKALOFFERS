@@ -1,0 +1,81 @@
+<html><body>
+<ion-view  view-title="Lokal Offers" align-title="center">
+   <ion-content >
+ 
+  <div class="bar bar-header" align="right">
+ 
+
+<button align="right" class="button button-clear button-positive" ng-Click="onClicksortBy($event,addoffers ) ">
+Sort By 
+</button>
+</div>
+<br><br>
+<div   class="" align="center" style="height:50px;text-align:center; border:0px solid; margin:0 auto;width:90%; ">
+ <div class="alert alert-info text-center" ng-hide="addoffers.length > 0">
+            <h3>Loading Offers..</h3>
+        </div>
+		
+		<a ng-repeat="addoffers_sortbyDiscount in addoffers_sortbyDiscount|reverse " class="item item-thumbnail-left"  ng-Click="onClickoffermain($event,addoffers_sortbyDiscount ) ">
+   <img  alt='' ng-src="data:image/jpeg;base64,{{addoffers.offerimage}}" >
+     <h2 class="animated tada" align="center">{{addoffers_sortbyDiscount.loginid}}</h2>
+     <p>{{addoffers_sortbyDiscount.offershopname}}</p>
+	  <p>
+     {{addoffers_sortbyDiscount.offerdetails}}
+    </p>
+    </a>
+
+		
+		
+<!--<div ng-repeat="addoffers in addoffers|reverse " class="card shadow divouter  animated " style="height: auto">
+  <div  class="item item-avatar divouter" >
+    <img ng-src="data:image/jpeg;base64,{{addoffers.offerlogo}}">
+	
+    <h2 class="animated tada" align="center">{{addoffers.loginid}}</h2>
+	 <p>{{addoffers.offershopname}}</p>
+	
+	<a href="tel:+919618188535"  >Call me</a>
+  </div>
+ <div class="item item-body divouter" >
+	<img  alt='' ng-src="data:image/jpeg;base64,{{addoffers.offerimage}}" >
+    <p>
+     {{addoffers.offerdetails}}
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a><br>
+	  <a href="tel:{{addoffers.offercontact1}}" class="subdued icon ion-ios-telephone">{{addoffers.offercontact1}}</a><br>
+	  <a href="tel:{{addoffers.offercontact2}}" class="subdued icon ion-ios-telephone">{{addoffers.offercontact2}}</a><br>
+	  <a href="mailto:{{addoffers.offeremail}}" class="subdued icon ion-ios-email"> {{addoffers.offeremail}}</a>
+    </p>
+  </div>
+ <div class=" item  tabs tabs-secondary tabs-icon-left  " style="background-color: #01D2FF;">
+    <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item"  >
+    <i class="icon ion-chatbox" value="Sms" ng-click="sendsms()"></i>Sms </a>
+     <a class="tab-item"  >
+    <i class="icon ion-share" value="Share" ng-click="shareAnywhere()"></i>Share Ad  </a>
+  </div>
+<a class="item item-icon-left assertive" href="#" style="background-color: #01D2FF;">
+    <i class="icon ion-music-note"></i>
+   Listen to The Ad Audio
+  </a>
+</div>-->
+<br><br>
+</div>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+</ion-content>
+<br><br><br><br>
+<br><br>
+</ion-view>
+<br><br><br><br>
+<div class="bar bar-footer bar-positive">
+  <button class="button button-clear"></button>
+  <div  class="button button-clear"style="font-size:60%">(c)Copy Rights Reserved @2015</div>
+  <div  class="button button-clear" style="font-size:60%" >Developed by Devi Android Apps</div>
+</div>
+</body></html>

@@ -1,0 +1,67 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+<ion-view    >
+   <ion-content >
+    <ion-nav-bar class="bar-positive"  >
+     	<ion-nav-buttons side="left">
+			<button class="button button-icon button-clear ion-navicon" ng-hide="authData"  menu-toggle="left"> </button>
+			<button class="button button-icon button-clear " ng-hide="!authData"  menu-toggle="left"> </button>
+			<!--<i align="center">LoKal offers</i>
+			<i class="item-text-wrap  " id="loginusername"  ng-hide="!authData.google.displayName" style="font-size:75%;font-color:black;">       <font color="white">Welcome {{authData.google.displayName}} </font> </i>
+			<i class="item-text-wrap " id="loginusername" ng-hide="!authData.facebook.displayName" style="font-size:75%;font-color:black;">      <font color="white">Welcome {{authData.facebook.displayName}}</font>   </i>-->
+			<a class="item-avatar" align="left" ng-hide="!authData.google.profileImageURL"> <img   ng-src="{{authData.google.profileImageURL}}" ></img></a>
+			<a class="item-avatar" align="left" ng-hide="!authData.facebook.profileImageURL"> <img   ng-src="{{authData.facebook.profileImageURL}}" > </img></a>
+		</ion-nav-buttons>
+		  <ion-nav-buttons side="right" align="center" >
+			<a   ng-click="logout()" ng-hide="!authData" style="  top: 7%;font-size:95%"  >  Logout</a>
+			<a   ng-hide="authData" ng-click="login()" style="  top: 7%;font-size:95%"  > Login</a>		
+		  </ion-nav-buttons>
+     </ion-nav-bar>
+ 
+    <ion-nav-view name="menuContent" ></ion-nav-view>
+	</ion-content>
+</ion-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+  <!-- <ion-header-bar class="dark-bg expanded">
+            <span ng-hide="!authData.google.profileImageURL" class="avatar" style="background: url('{{authData.google.profileImageURL}}'); background-size: cover;"></span>
+            <span ng-hide="!authData.facebook.profileImageURL" class="avatar" style="background: url('{{authData.facebook.profileImageURL}}'); background-size: cover;"></span>
+           
+		   <h2>Local Offers</h2>
+        </ion-header-bar>-->
+  <ion-header-bar class="bar-positive" >
+			<a class="item-avatar" ng-hide="!authData.google.profileImageURL"> <img   ng-src="{{authData.google.profileImageURL}}" ></img>LoKal offers</a>
+			<a class="item-avatar" ng-hide="!authData.facebook.profileImageURL"> <img   ng-src="{{authData.facebook.profileImageURL}}" ></img>LoKal offers</a>
+  </ion-header-bar>
+    <ion-content style="background: url(img/pic4.png) center; background-size: cover;font-size:200%">	
+      <ion-list class="list-positive">
+	   <ion-item >     
+        </ion-item>	
+        <ion-item menu-close ng-click="login()" ng-hide="authData">
+         Login
+        </ion-item>
+		<ion-item menu-close href="#/app/playlists">
+          Latest Offers
+        </ion-item>
+		<ion-item menu-close ng-click="logout()" ng-hide="!authData">
+         Logout({{authData.google.displayName}}{{authData.facebook.displayName}})</a>
+        </ion-item>
+		 <ion-item menu-close ng-hide="!authData" href="#/app/dashboardlogin">
+          <i class=' '> Dashboard</i>
+        </ion-item>
+        <ion-item menu-close href="#/app/addoffer">
+          <i class='ion-ios-cart'> Add Offers</i>
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+         Categories
+        </ion-item> 
+      </ion-list>
+			
+    </ion-content>
+ 
+	<div class="bar bar-footer bar-positive" style="height:5%;position:fixed">
+				<button class="button button-clear"></button>
+				<a style="font-size:50%;align:center" >Developed by Devsan Smart Apps</a>
+			</div>
+  </ion-side-menu>
+</ion-side-menus>

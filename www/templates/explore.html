@@ -1,0 +1,38 @@
+	<ion-modal-view>
+	<ion-header-bar>
+    <h1 class="title">Register Merchant</h1>
+    <div class="buttons">
+      <button class="button-icon icon ion-close-round  " style="text-align:'center';" align="center" ng-click="closeregister()"></button>
+    </div>
+	</ion-header-bar>
+	<ion-content style="background: url(img/pic4.png) center; background-size: cover;" scroll="true">
+		<div class="list">
+		<form name="loginForm" ng-submit="registermerchant($event)"> 
+			<ion-md-input placeholder="UserID" highlight-color="hightlight-positive" type="text" ng-model="loginData.userid" ng-class="{ 'has-errors' : loginForm.userid.$invalid && !loginForm.userid.$pristine, 'no-errors' : loginForm.userid.$valid}" required></ion-md-input> 
+			<ion-md-input placeholder="Password" highlight-color="energized" type="password" ng-model="loginData.pass" ng-minlength='1' ng-class="{ 'has-errors' : loginForm.pass.$invalid && !loginForm.pass.$pristine, 'no-errors' : loginForm.pass.$valid}" required></ion-md-input>
+			<ion-md-input placeholder="Re-Type Password" highlight-color="energized" type="password" ng-model="loginData.pass1" ng-minlength='1' ng-class="{ 'has-errors' : loginForm.pass1.$invalid && !loginForm.pass1.$pristine, 'no-errors' : loginForm.pass1.$valid}" required></ion-md-input>
+			<ion-md-input placeholder="Company Name" highlight-color="hightlight-positive"  type="text" ng-model="loginData.compname" ng-class="{ 'has-errors' : loginForm.compname.$invalid && !loginForm.compname.$pristine, 'no-errors' : loginForm.compname.$valid}" required></ion-md-input> 
+			<ion-md-input placeholder="Area" value="{{loginData.area}}" highlight-color="hightlight-positive" value="{{loginData.area}}" type="text" ng-model="loginData.area" ng-class="{ 'has-errors' : loginForm.area.$invalid && !loginForm.area.$pristine, 'no-errors' : loginForm.area.$valid}" required></ion-md-input> 
+			<ion-md-input placeholder="City" value="{{loginData.city}}" highlight-color="hightlight-positive" value="{{loginData.city}}" type="text" ng-model="loginData.city" ng-class="{ 'has-errors' : loginForm.city.$invalid && !loginForm.city.$pristine, 'no-errors' : loginForm.city.$valid}" required></ion-md-input> 
+			<ion-md-input placeholder="E-Mail" type="email"  highlight-color="hightlight-positive" value="{{loginData.email}}" type="text" ng-model="loginData.email" ng-class="{ 'has-errors' : loginForm.email.$invalid && !loginForm.email.$pristine, 'no-errors' : loginForm.email.$valid}" required></ion-md-input> 
+			<ion-md-input placeholder="Contact Number" type="tel"  highlight-color="hightlight-positive" value="{{loginData.contact1}}" type="text" ng-model="loginData.contact1" ng-class="{ 'has-errors' : loginForm.contact1.$invalid && !loginForm.contact1.$pristine, 'no-errors' : loginForm.contact1.$valid}" required></ion-md-input> 
+			<ion-md-input placeholder="Contact Number" type="tel"  highlight-color="hightlight-positive" value="{{loginData.contact2}}" type="text" ng-model="loginData.contact2" ng-class="{ 'has-errors' : loginForm.contact2.$invalid && !loginForm.contact2.$pristine, 'no-errors' : loginForm.contact2.$valid}" required></ion-md-input>     
+       <label class="item item-input">
+          <button class="button button-block button-positive" ng-disabled="loginForm.$invalid" type="submit">Register</button>
+		</label>
+		</form>
+		</div>
+		<div>Select Area</div>
+			<map on-create="mapCreated(map)"></map>
+		<!--<div>
+			<button ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Show My Location</button>
+		</div>-->
+		<br> <br> <br> 
+ </ion-content>	
+	<div class="bar bar-footer bar-positive" style="height:3%;">
+ 
+  <a style="font-size:50%" align="left">(c)Copy Rights Reserved @2015</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a style="font-size:50%" align="right">Developed by Devi Android Apps</a>
+</div>
+</ion-modal-view>
+

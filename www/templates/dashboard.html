@@ -1,0 +1,48 @@
+<ion-view view-title="LoKalOffers"   align-title="center" > 
+
+<ion-content style="background: url(img/pic4.png) center; background-size: cover;">	
+  
+<br><br>
+<h2 style="width:90%;">Welcome {{authData.google.displayName}}{{authData.facebook.displayName}} </h2>
+<div class="container"  >
+<span>Click on the Offer to Edit</span>
+   <div class="card" style="background:  #A30006">
+		
+		<div ng-repeat="addoffers in dashaddoffers" class="todo col-md-12 col-sm-12 col-xs-12" ng-if="addoffers.loginid == dashuser"   >
+             
+            <div style="background:  #F5F3E5" align="center" class="card" ng-Click="onClickeditoffer ($event,addoffers ) ">
+                <span ng-show="!isEditable[$index]">{{addoffers.offercategory}} <br>{{addoffers.offershopname}}</span>
+				<div style="background:  #FAFAFA" class="card">
+				  <span ng-show="!isEditable[$index]">{{addoffers.offerdetails}}</span>
+				</div>
+				<div style="width=90%">
+					<span>Offer Start Date:{{addoffers.offerstartdate.slice(0,9)}}</span>
+					<br>
+					<span>Offer End Date:{{addoffers.offerenddate.slice(0,9)}}</span>
+					<br>
+					<input type="button" class="button-small button-assertive button-positive"  class="pull-right"  value="Delete" ng-click="delete($index)" />
+				
+				
+				</div>
+				 <!-- <div class="card">
+				 <img    ng-src="data:image/jpeg;base64,{{addoffers.offerimage}}" style="width:50%;height:50%"/>
+				  </div>
+				   <div class="card">
+				 <img    ng-src="data:image/jpeg;base64,{{addoffers.offerlogo}}" style="width:50%;height:50%" />
+				  </div>
+                <input ng-show="isEditable[$index]" type="text" value="{{addoffers.offerdetails}}" ng-keypress="edit($event,$index);">
+                <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
+             
+                <input type="button" class="btn btn-info"     value="Edit" ng-click="isEditable[$index] = true" />
+                <input type="button" class="btn btn-danger"   value="Delete" ng-click="delete($index)" />
+           -->
+		   
+		   </div>
+        </div>
+	</div>
+
+</div>
+</ion-content>
+ <button id="add-offer" class="button button-fab button-fab-bottom-right button-assertive " ng-click="onaddoffer()"><i class="icon ion-plus"  ></i></button>'
+
+</ion-view>

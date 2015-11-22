@@ -1,0 +1,49 @@
+<html><body>
+<ion-view view-title="LoKalOffers" style="font-size:40%;text-align:left; "   > 
+  <br>
+   <br>
+    <br>
+<a   style="z-index: 25; position: fixed;  top: 8%; align:left" class="button button-clear button-positive" ng-Click="onClicksortBy($event  ) ">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Sort By	 
+</a>   
+<br> 
+	<!--	Category
+				<select ng-model="addOffer.shopcat" id="addOffer.shopcat" ng-options="value for value in category track by value " style="align=right;width:40%; " ></select>
+		-->
+   <ion-content style="background: url(img/pic4.png) center; background-size: cover;">	
+    <br>     <br>
+		<div   class="" align="center" style="height:50px;text-align:center; border:0px solid; margin:0 auto;width:80%; ">
+		<div class="alert alert-info text-center" ng-hide="addoffers.length > 0">
+            <h3>Loading Offers..</h3>
+        </div>	
+		<a auto-list-divider auto-list-divider-value="{{addoffers.offercategory}}" ng-repeat="addoffers in addoffers|reverse|limitTo:totalDisplayed " class="card shadow  item item-thumbnail-left item-text-wrap  " style="height:10%;text-align:center;width=95%;" ng-Click="onClickoffermain($event,addoffers ) ">
+		<img  alt='' ng-src="data:image/jpeg;base64,{{addoffers.offerimage}}" ><u>  {{addoffers.offercategory}}</u>
+		<h2 class="" style="text-shadow:2px 2px 2px blue" ng-hide="{{!addoffers.offerdiscount}}" align="center">Discount: {{addoffers.offerdiscount}}%</h2>
+		<p style="text-shadow:0 0 2px purple">{{addoffers.offershopname}}</p>
+		<p style="text-shadow:0 0 2px green">{{addoffers.offerarea}}</p>
+		<p class="item-text-wrap ">
+				{{addoffers.offerdetails}}
+		</p>
+		</a> 
+		<a class="button button-clear" ng-hide="totalDisplayed>addoffers.length" ng-click="loadMore()"><font color="black">Load more</font></a>
+		<br><br> 
+		</div>
+<br><br><br><br>
+
+<tnf-dbl-back-exit></tnf-dbl-back-exit>
+</ion-content>
+
+<br><br><br><br>
+<br><br>
+
+</ion-view>
+<br><br>
+
+<br><br>
+<div class="bar bar-footer bar-positive" style="height:3%;">
+  <button class="button button-clear"></button>
+  
+  <a style="font-size:50%">(c)Copy Rights Reserved @2015</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+  <a style="font-size:50%" >Developed by Devsan Smart Apps</a>
+</div>
+</body></html>

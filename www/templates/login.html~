@@ -1,0 +1,67 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form  >
+	 
+<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content">
+				
+				<div>
+					<!--<p>This is a modal window. You can do the following things with it:</p>
+					<ul>
+						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+						<li><strong>Close:</strong> click on the button below to close the modal.</li>
+					</ul>
+					<button class="md-close">Okey</button>-->
+
+	   			<section class="content">
+ 			 <p>{{ statusMessage }}</p>		
+				<span class="input input--kaede"  >
+					<input class="input__field input__field--kaede" type="text" id="input-35" />
+					<label class="input__label input__label--kaede" for="input-35">
+						<span class="input__label-content input__label-content--kaede" ng-model="loginusername"     >User Name</span>
+					</label>
+				</span>
+				<span class="input input--kaede">
+					<input class="input__field input__field--kaede" type="password" id="input-36" />
+					<label class="input__label input__label--kaede" for="input-36">
+						<span class="input__label-content input__label-content--kaede" ng-model="loginpassword" >Password</span>
+					</label>
+				</span>
+ 
+			</section>
+			<div class="sandhya" align="center">
+				<table border="0"><tr><td><button class="button button-small button-positive" type="submit" ng-click="save(loginusername,loginpassword)">Proceed</button></td><td>&nbsp;&nbsp;&nbsp;</td>
+						<td><button class="button button-small button-positive">Cancel</button></td></tr><tr><td> <p>{{ statusMessage }}</p></td></tr></table>
+			</div>
+			</div>
+		    </div>
+		</div> 
+    <!--  <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive"   ">Log in</button>
+        </label>
+      </div> -->
+    </form>
+    <div><p>{{ statusMessage }}</p></div>
+  </ion-content>
+<div class="bar bar-footer bar-positive">
+  <button class="button button-clear"></button>
+  <div  class="button button-clear"style="font-size:60%">(R)Copy Rights Reserved @2015</div>
+  <button  class="button button-clear"style="font-size:75%" >Developed by Devi Android Apps</button>
+</div>
+</ion-modal-view>

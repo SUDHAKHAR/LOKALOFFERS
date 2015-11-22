@@ -1,0 +1,104 @@
+<ion-modal-view>
+	<ion-header-bar>
+    <h2 class="title " align="center" style="background:blue">Edit Offer</h2>
+    <div class="buttons">
+      <button class="button-icon icon ion-close-round  " style="text-align:'center';" align="center" ng-click="closeregister1()"></button>
+    </div>
+	</ion-header-bar>
+  </ion-header-bar>
+  <ion-content style="background: url(img/pic4.png) center; background-size: cover;" >
+	
+	<br><br><br>
+  <form  name="addOfferForm" novalidate >
+			<label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.ouserid.$invalid && !addOfferForm.ouserid.$pristine, 'no-errors' : addOfferForm.ouserid.$valid}">
+				<span class="input-label">UserId</span>
+				<input type="text" name="ouserid" ng-disabled="true" ng-model="addoffer1.loginid" required>
+			</label>
+			<label class="item item-input">
+				<span class="input-label">State</span>  
+				<select ng-model="addoffer1.offerstate"    name ="state" style="width:40%; " id ="state" ng-options="value for value in states_india track by value " ng-change="select_district($event,district,$index)"></select> 
+			</label>
+			<label class="item item-input">
+				<span class="input-label">District</span>
+				<select ng-model="addoffer1.offerdistrict"  name ="district" style="width:40%; " id ="district"   ng-change="select_district_area($event,area,$index)"></select>
+				<span class="input-label">{{addoffer1.offerdistrict}} </span>
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Area</span>
+				<select ng-model="addoffer1.offerarea"   name ="area"style="width:40%; " id ="area"  ></select>
+				<span class="input-label">{{addoffer1.offerarea}} </span>
+			</label>
+			  <label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.oshopname.$invalid && !addOfferForm.oshopname.$pristine, 'no-errors' : addOfferForm.oshopname.$valid}">
+           	<span class="input-label">Shop Name</span>
+				<input type="text" name="oshopname" value="{{addoffer1.shopname}}" ng-model="addoffer1.offershopname" required >
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Upload Company Logo</span>
+				<button class="button button-icon icon ion-ios-folder" value="{{addoffer1.offerlogo}}" ng-model="addoffer1.shopname" ng-click="browse_logo($event)" class="button button-block button-primary"> Browse/Camera</button>
+			</label>
+			<label class="item">
+			 	<img    ng-src="data:image/jpeg;base64,{{addoffer1.offerlogo}}" style="max-width: 100%"> 
+			
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Category</span>
+				<select ng-model="addoffer1.offercategory" id="addOffer.shopcat" value="{{addoffer1.offercategory}}" ng-options="value for value in category track by value " style="width:40%; " ></select>
+			
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Upload Offer Image</span>
+				<button class="button button-icon icon ion-ios-folder" value="{{addoffer1.offerimage}}" ng-model="addoffer1.offerimage" ng-click="browse($event)" class="button button-block button-primary"> Browse/Camera</button>
+			</label>
+			<label class="item">
+			 	<img  ng-src="data:image/jpeg;base64,{{addoffer1.offerimage}}" style="max-width: 100%"> 
+			</label>
+			 <label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.oofferdiscount.$invalid && !addOfferForm.oofferdiscount.$pristine, 'no-errors' : addOfferForm.oofferdiscount.$valid}">
+          	<span class="input-label">Discount %</span>
+				<input type="number" name="oofferdiscount"   value='{{addoffer1.offerdiscount}}' ng-model="addoffer1.offerdiscount" ng-minlength='1' ng-maxlength='3' required>
+			</label>
+			  <label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.oofferdetails.$invalid && !addOfferForm.oofferdetails.$pristine, 'no-errors' : addOfferForm.oofferdetails.$valid}">
+				<span class="input-label">Offer Details</span>
+				<input type="text" name="oofferdetails"   value=' offer Details' ng-model="addoffer1.offerdetails" ng-minlength='20' ng-maxlength='300' required>
+			</label>
+			<label class="item item-input">
+			
+				<span class="input-label">Offer StartDate & Time</span>
+				<input type="date"  value="{{addoffer1.offerstartdate}}" placeholder="addoffer1.offerstartdate" ng-model="addOffer.offerstartdate" ><br>
+				<span class="input-label">{{addoffer1.offerstartdate.slice(0,9)}}</span>
+				<input type="time" value="{{addoffer1.offerstarttime}}"  placeholder="addoffer1.offerstarttime"  ng-model="addOffer.offerstarttime" >
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Offer EndDate & Time</span>
+				<input type="date" value="{{addoffer1.offerenddate}}"  placeholder="addoffer1.offerenddate" ng-model="addOffer.offerenddate" ><br>
+				<span class="input-label">{{addoffer1.offerenddate.slice(0,9)}}</span>
+				<input type="time"  value="{{addoffer1.offerendtime}}" placeholder="addoffer1.offerendtime" ng-model="addOffer.offerendtime" > 
+			</label>
+			 <label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.email.$invalid && !addOfferForm.email.$pristine, 'no-errors' : addOfferForm.email.$valid}">
+          		<span class="input-label">E-mail</span>
+				<input type="email" value="{{addoffer1.email}}" name="email" ng-model="addoffer1.offeremail" reqiured>
+			</label>
+			<label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.contact1.$invalid && !addOfferForm.contact1.$pristine, 'no-errors' : addOfferForm.contact1.$valid}">
+          		<span class="input-label">Contact No.</span>
+				<input type="tel" name="contact1" value="{{addoffer1.contact1}}" ng-model="addoffer1.offercontact1"  required>
+			</label>
+			<label class="item item-input" ng-class="{ 'has-errors' : addOfferForm.contact2.$invalid && !addOfferForm.contact2.$pristine, 'no-errors' : addOfferForm.contact2.$valid}">
+          	<span class="input-label">Alternate No.</span>
+				<input type="tel" name="contact2" value="{{addoffer1.contact2}}"	ng-model="addoffer1.offercontact2" required>
+			</label>
+				<button class="button button-block button-positive" ng-disabled="addOfferForm.$invalid" ng-click="edit($event,$index,addoffer1)" type="submit">Update Offer</button>
+   </form>
+   <br><br><br>
+   <!--  <div>Select Area</div>
+	      <map on-create="mapCreated(map)"  ></map>
+   <div>
+    <button ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Show My Location</button>
+	  </div>-->
+	 <br> <br> <br> <br> <br> <br> <br>
+	  </ion-content> 
+	<div class="bar bar-footer bar-positive" style="height:3%;">
+  <button class="button button-clear"></button>
+  
+  <a style="font-size:50%">(c)Copy Rights Reserved @2015</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+  <a style="font-size:50%" >Developed by Devsan Smart Apps</a>
+</div>
+</ion-modal-view>
